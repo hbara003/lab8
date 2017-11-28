@@ -24,13 +24,13 @@ void PrintVisitor::addNode() {
     output.append(" +");
 }
 
-void opNode(Op* op) {
-    stringstream opvalue;
-    opvalue = op->evaluate();
+void PrintVisitor::opNode(Op* op) {
+    std::stringstream opvalue;
+    opvalue << op->evaluate();
     output.append(" ");
-    output.append(opvalue);
+    output.append(opvalue.str());
 }
 
-void execute() {
+void PrintVisitor::execute() {
     std::cout << output << std::endl;
 }
