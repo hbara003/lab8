@@ -2,6 +2,11 @@
 #define VISITOR_H
 
 #include "composite.h"
+#include <string>
+#include <sstream>
+#include <iostream>
+
+class Op;
 
 class Visitor {
 	public:
