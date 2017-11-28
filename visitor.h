@@ -1,3 +1,6 @@
+#ifndef VISITOR_H
+#define VISITOR_H
+
 class PrintVisitor : public Visitor {
 	private:
 		std::string output;
@@ -14,3 +17,5 @@ class PrintVisitor : public Visitor {
 
 		void execute();		//Prints all visited nodes
 };
+
+#endif
