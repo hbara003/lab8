@@ -40,8 +40,9 @@ int main() {
 	PreorderIterator* pre_itr = new PreorderIterator(root);
         PrintVisitor* pv = new PrintVisitor(root);
 	for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) {
-		pre_itr->current()->print();
+		pv->pre_itr->current()->accept(pv);
 		cout << endl;
+        	
 	}
 
 	pv->execute();
